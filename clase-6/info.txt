@@ -1,0 +1,6 @@
+- mas modularizacion : /*rutas - controladores*/ - servicios - modelos
+- handlebars o cualquier motor de plantillas (React)
+- web sockets o conexion en tiempo real
+
+
+Request -> middleware -> ruta -> controlador -> servicio -> modelo
