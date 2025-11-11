@@ -1,0 +1,9 @@
+https://socket.io/docs/v4/server-initialization/#with-express
+
+- mas modularizacion : una clase para el servidor - servicios - modelos
+- archivos estaticos del front (ya esta)
+- web sockets o conexion en tiempo real (Socket.io es la libreria)
+- mongodb 
+
+
+Request -> middleware -> ruta -> controlador -> servicio -> modelo
