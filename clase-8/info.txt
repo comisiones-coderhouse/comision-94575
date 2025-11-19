@@ -1,0 +1,52 @@
+Socket.IO + Express : https://socket.io/docs/v4/server-initialization/#with-express
+Driver oficial MongoDB : https://www.npmjs.com/package/mongodb
+ORM MongoDB : https://mongoosejs.com/
+Documentacion consultas a DB : https://mongoosejs.com/docs/api/model.html
+Validation de Requests : https://www.npmjs.com/package/celebrate
+Validacion de schemas generales : https://joi.dev/api/?v=17.13.3
+
+- mas modularizacion : una clase para el servidor - servicios - modelos
+- archivos estaticos del front (ya esta)
+- web sockets o conexion en tiempo real (Socket.io es la libreria)
+- mongodb 
+
+
+Request -> middleware -> ruta -> controlador -> servicio -> modelo
+
+
+SQL
+Not only SQL
+
+
+Bases de datos : 
+
+- Relacionales : SQL - Mysql - Oracle - MariaDB - PostgreSQL - etc...
+- No Relacionales : MongoDB - Cassandra - Firebase - etc...
+- Grafos
+- etc...
+
+
+
+MongoDB vs SQL
+
+
+DB Server   ->  DB Server
+Database    ->  Database
+Collections ->  Tables / Entities
+Properties  ->  Columns
+Document    ->  Registro / Fila de la tabla
+
+
+
+- INSERT INTO users (nombre) VALUES ("Horacio");
+
+Mongoose : Es una libreria (ORM Object Relational Mapping) 
+
+Schema : Sirve para definir esquemas de validacion para las collections, lo que seria la definicion de tablas en SQL
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT
+    nombre VARCHAR NOT NULL
+);
+
+Model : Serian el nexo conector entre nuestro codigo y la DB

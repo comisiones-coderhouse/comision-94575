@@ -7,3 +7,7 @@ https://socket.io/docs/v4/server-initialization/#with-express
 
 
 Request -> middleware -> ruta -> controlador -> servicio -> modelo
+
+
+SQL
+Not only SQL
