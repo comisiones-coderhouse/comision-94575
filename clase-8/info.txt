@@ -50,3 +50,71 @@ CREATE TABLE users (
 );
 
 Model : Serian el nexo conector entre nuestro codigo y la DB
+
+
+
+CRUD/ABM : Create - read - Update - Delete / Alta - Baja - Modificacion
+
+Crear un documento : 
+
+Modelo.create({name : "Horacio"})
+db.collection.insertOne({name : "Horacio"})
+INSERT INTO collection ('name') VALUES ("Horacio")
+
+
+Leer documents : 
+
+Modelo.find()
+db.collection.find()
+SELECT * FROM collection
+
+
+Actualizar documents : 
+
+Modelo.updateOne(query document, update document)
+Modelo.updateOne({ _id : id },{ nombre : nombre})
+db.collection.update({ _id : id },{ nombre : nombre})
+UPDATE collection SET name = "Horacio" WHERE _id = id
+
+Eliminar documents : 
+
+Modelo.deleteOne({ _id : id })
+db.collection.deleteOne({ _id : id })
+DELETE FROM collection WHERE _id = id
+
+
+
+FILTROS : 
+
+db.collection.find(query document,[projection document]) : Consultas simples y basicas
+
+db.collection.aggregate([]) : Hacer consultas con proyecciones complejas y de datos que no esten 
+fisicamente almanacenados en la DB, consultas con relaciones (JOIN), consultas de grupo (GROUP BY)
+
+
+db.collection.find() : Traeme todo de la collection
+db.collection.find({}) : Traeme todo de la collection
+db.collection.find({ edad : 30 }) : Traeme todos cuya edad es igual a 30
+db.collection.find({ edad : 30 , nombre : "Horacio" }) : Traeme todos cuya edad es igual a 30 YYYYY (AND) nombre es igual a "Horacio"
+
+OPERATORS : 
+
+db.collection.find({
+    edad : {
+        $eq : 30
+    }
+})
+
+db.collection.find({
+    edad : {
+        //$gt : greater than
+        $gt : 30
+    }
+})
+
+db.collection.find({
+    edad : {
+        //$lt : less than
+        $lt : 30
+    }
+})
